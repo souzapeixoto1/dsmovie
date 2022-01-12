@@ -2,7 +2,7 @@
 
 
 :root {
-  --color-primary: #0f0f11;
+  --color-primary: hsl(266, 100%, 50%);
 }
 
 * {
@@ -11,7 +11,7 @@
 }
 
 html, body {
-    background-color: ##717171;
+    background-color: #e2e2e2e5;
 }
 
 a, a:hover {
