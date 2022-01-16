@@ -1,14 +1,14 @@
-import { ReactComponent as StarFull } from 'assets/img/star-full.svg'
+import { ReactComponent as StarFull } from 'assets/img/star-full.svg';
 import { ReactComponent as StarHalf } from 'assets/img/star-half.svg';
 import { ReactComponent as StarEmpty } from 'assets/img/star-empty.svg';
 import './styles.css';
 
 type Props = {
-    score: number;
+  score: number;
 }
 
-type StarProps = {
-    fill: number;
+type StarProps = { 
+  fill: number;
 }
 
 // EX:
@@ -32,32 +32,33 @@ function getFills(score: number) {
     return fills;
   }
 
-function Star ({ fill } : StarProps){
-    if (fill === 0) {
-        return <StarEmpty />
-    }
-    else if (fill === 1) {
-        return <StarFull/>
-    } else {
-        return <StarHalf/>
-    }
-
+function Star({ fill } : StarProps) {
+  if (fill === 0) {
+    return <StarEmpty />
+  }
+  else if(fill === 1) {
+    return <StarFull />
+  }
+  else {
+    return <StarHalf />
+  }
 }
 
 function MovieStars({ score } : Props) {
 
-    const fills = getFills(score);
+   const fills = getFills(score);
 
     return (
         <div className="dsmovie-stars-container">
-            <Star fill = {fills[0]} />
-            <Star fill = {fills[1]} />
-            <Star fill = {fills[2]} />
-            <Star fill = {fills[3]} />
-            <Star fill = {fills[4]} />
+            <Star fill={fills[0]} />
+            <Star fill={fills[1]} />
+            <Star fill={fills[2]} />
+            <Star fill={fills[3]} />
+            <Star fill={fills[4]} />
+            
         </div>
-    );
 
+    );
 }
 
 export default MovieStars;
